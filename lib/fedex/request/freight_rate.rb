@@ -21,8 +21,8 @@ module Fedex
               }
             }
           }
-          add_unified_freight_shipment_detail(xml) if (@freight_account[:account_number] = '300288790')
-          add_freight_shipment_detail(xml) unless (@freight_account[:account_number] = '300288790')
+          add_unified_freight_shipment_detail(xml) if (@freight_account[:account_number] == '300288790')
+          add_freight_shipment_detail(xml) unless (@freight_account[:account_number] == '300288790')
           xml.RateRequestTypes "PREFERRED"
         }
       end
